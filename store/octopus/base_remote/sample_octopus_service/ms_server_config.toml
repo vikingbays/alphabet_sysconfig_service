@@ -1,0 +1,94 @@
+#示例代码：
+#register  一个server只能注册到一个服务中心，用于服务端注册到服务中心
+[[server]]
+groupId="group_octopus01"
+groupName="group_octopus01"
+protocol="rpc_unix"  #rpc_tcp,rpc_unix,rpc_tcp_ssl
+ipType="ipv4"        # 使用ipv4 还是 ipv6
+ip="/Users/vikingbays/golang/AlphabetwebProject/sos_rpc.sock"     # 建议长度必须小于 55 ，如果过长启动有问题，会报错：invalid argument
+port=0
+ticketDuration=30    # 间隔多长时间更新票据,单位：分钟
+
+#[[server]]
+#groupId="group_octopus01"
+#groupName="group_octopus01"
+#protocol="rpc_tcp"  #rpc_tcp,rpc_unix,rpc_tcp_ssl
+#ipType="ipv4"        # 使用ipv4 还是 ipv6
+#ip="127.0.0.1"    # 如果配置 * 表示任意指定有效网卡
+#port=10777
+#ticketDuration=30    # 间隔多长时间更新票据
+
+#[[server]]
+#groupId="group_octopus01"
+#groupName="group_octopus01"
+#protocol="rpc_tcp_ssl"  #rpc_tcp,rpc_unix,rpc_tcp_ssl
+#ipType="ipv4"        # 使用ipv4 还是 ipv6
+#ip="127.0.0.1"    # 如果配置 * 表示任意指定有效网卡
+#port=10766
+#ticketDuration=30    # 间隔多长时间更新票据
+
+#[[server]]
+#groupId="group_octopus01"
+#groupName="group_octopus01"
+#protocol="rpc_unix"  #rpc_tcp,rpc_unix,rpc_tcp_ssl
+#ipType="ipv4"        # 使用ipv4 还是 ipv6
+#ip="${project}/sos_rpc.sock"    # 如果配置 * 表示任意指定有效网卡
+#port=0
+#ticketDuration=30    # 间隔多长时间更新票据
+
+
+[[server.register]]
+type="etcd"
+endpoints = ["127.0.0.1:2379"]
+username  = "serv001"
+password  = "123456"
+timeout = 2     # 2秒
+root = "awroot_serv001"
+
+[[server.rpcs]]
+rpcId="db_index"
+url="/db/index"
+desc="db_index...desc...."
+available=true
+
+[[server.rpcs]]
+rpcId="db_insert"
+url="/db/insert"
+desc="db_insert...desc...."
+available=true
+
+[[server.rpcs]]
+rpcId="db_delete"
+url="/db/delete"
+desc="db_delete...desc...."
+available=true
+
+[[server.rpcs]]
+rpcId="db_query"
+url="/db/query"
+desc="db_query...desc...."
+available=true
+
+[[server.rpcs]]
+rpcId="download_do_download"
+url="/download/do_download"
+desc="download_do_download...desc...."
+available=true
+
+[[server.rpcs]]
+rpcId="restful_jsoninfo"
+url="/restful/jsoninfo/{min}/{max}"
+desc="restful_jsoninfo...desc...."
+available=true
+
+[[server.rpcs]]
+rpcId="upload_uploadfile"
+url="/upload/uploadfile"
+desc="upload_uploadfile...desc...."
+available=true
+
+[[server.rpcs]]
+rpcId="upload_uploadstream"
+url="/upload/uploadstream"
+desc="upload_uploadstream...desc...."
+available=true

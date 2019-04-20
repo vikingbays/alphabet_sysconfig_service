@@ -1,0 +1,14 @@
+[[action]]
+Downzip="downzip/{projectid}/{aliaskey}/{appname}"
+Filelist="filelist"
+FilelistJson="filelistjson"
+
+[[gml]]
+view_downzip_err="view/sysconfig_downzip_err.gml"
+view_filelist="view/filelist.gml"
+
+[[static]]
+name="resource/"   # 如果是多个，逗号分隔
+
+[[index]]
+name="/sysconfig/resource/index.html"

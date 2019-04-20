@@ -1,0 +1,14 @@
+#客户端获取服务信息
+[[client]]
+groupIds=["group_octopus01"]
+maxPoolSize=20  # 增加reqPerConn=50
+reqPerConn=20
+
+
+[[client.register]]
+type = "etcd"
+endpoints = ["127.0.0.1:2379"]
+username  = "serv001"
+password  = "123456"
+timeout = 2     # 2秒
+root = "awroot_serv001"

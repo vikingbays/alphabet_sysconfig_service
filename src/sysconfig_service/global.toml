@@ -1,0 +1,3 @@
+[[stores]]
+storefolder="${project}/store"
+tmpfolder="${project}/tmp"

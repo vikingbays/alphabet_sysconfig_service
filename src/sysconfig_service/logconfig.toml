@@ -1,0 +1,23 @@
+#format:
+#       %T - Time (15:04:05 MST)
+#       %t - Time (15:04)
+#       %D - Date (2006/01/02)
+#       %d - Date (01/02/06)
+#       %L - Level (FNST, FINE, DEBG, TRAC, WARN, EROR, CRIT)
+#       %S - Source
+#       %M - Message
+#       It ignores unknown format strings (and removes them)
+#       Recommended: "[%D %T] [%L] (%S) %M"
+
+[[filters]]
+enabled="true"
+tag="file"
+type="file"
+level="INFO"   # �������� (:?FINEST|FINE|DEBUG|TRACE|INFO|WARNING|ERROR)
+format="[%D %T] [%L] (%S) (GID:%G) (%U) %M "
+
+filename="${project}/logs/apps.log"  # ���Դ����� ${project}/logs/test.log
+rotate="false"
+rotateMaxSize="0"    #\d+[KMG]? Suffixes are in terms of 2**10
+rotateMaxLines="0"   #\d+[KMG]? Suffixes are in terms of thousands
+rotateDaily="false"

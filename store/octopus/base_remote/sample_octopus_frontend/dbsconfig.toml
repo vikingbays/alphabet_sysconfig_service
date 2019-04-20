@@ -1,0 +1,34 @@
+# [[dbs]]:   --- 固定名称
+# name             ---  设置名称
+# driverName       ---  驱动名
+# dataSourceName   ---  驱动地址
+#
+#例如：postrgesql
+# 
+# [[dbs]]
+# name = "pg_test1"
+# driverName="postgres"
+# dataSourceName="postgres://pqgotest:password@localhost/pqgotest?sslmode=disable"
+#
+
+
+#[[dbs]]
+#name="db_test1"
+#driverName="mysql"
+#dataSourceName="root:root1234@tcp(127.0.0.1:33060)/mysql?timeout=90s&autocommit=false"
+#maxPoolSize=5
+
+
+[[dbs]]
+name="db_test1"
+driverName="postgres"
+dataSourceName="postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable&application_name=alphabet"
+maxPoolSize=20
+ 
+[[dbs]]
+name="db_actionmonitor"
+driverName="postgres"
+dataSourceName="postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable&application_name=alphabet"
+maxPoolSize=5
+
+
