@@ -16,7 +16,7 @@ Sysconfig 项目配置项文件可以存储到 统一配置中心（sysconfig_se
 下载[sysconfig_service]
 
 启动：
-```TOML
+```
 AlphabetwebProject="/Users/vikingbays/golang/AlphabetwebProject/alphabetweb"
 
 sysconfig_service="/Users/vikingbays/golang/AlphabetwebProject/alphabet_sysconfig_service"
@@ -40,7 +40,7 @@ http://localhost:10060/sysconfigservice/sysconfig/downzip/{projectid}/{aliaskey}
 统一配置中心（sysconfig_service）的Sysconfig配置文件默认存储在： sysconfig_service/store 。
 
 假设当前AlphabetWeb项目 sample_octopus_frontend_service , 他有两个应用包 sample_octopus_frontend 和 sample_octopus_service ，具体目录结构是：
-```TOML
+```
   sample_octopus_frontend_service
       ...
       src
@@ -51,7 +51,7 @@ http://localhost:10060/sysconfigservice/sysconfig/downzip/{projectid}/{aliaskey}
 ```
 
 那么在统一配置中心（sysconfig_service）配置此项目的Sysconfig
-```TOML
+```
   sysconfig_service
       store
           ...
