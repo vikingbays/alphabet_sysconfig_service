@@ -1,5 +1,7 @@
 # Vikingbays • AlphabetWeb : alphabet_sysconfig_service
 
+更多资料，请访问 : [https://www.vikingbays.com/leader/docs/page/develop_09sysconfig_03remote](https://www.vikingbays.com/leader/docs/page/develop_09sysconfig_03remote) 。
+
 alphabet_sysconfig_service 作为AlphabetWeb的统一配置中心。
 
 统一配置中心解决了本地化配置管理有其局限性，例如在微服务体系下，可能因为程序频繁更新，会使配置文件不一致概率增大，存在冲突。因此需要有一个统一配置中心，保障配置信息高度一致性。
