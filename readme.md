@@ -52,7 +52,7 @@ http://localhost:10060/sysconfigservice/sysconfig/downzip/{projectid}/{aliaskey}
 
 那么在统一配置中心（sysconfig_service）配置此项目的Sysconfig
 ```
-  sysconfig_service
+  alphabet_sysconfig_service
       store
           ...
           octopus                               # 项目别名，可以和sample_octopus_frontend_service不一致
@@ -73,11 +73,11 @@ http://localhost:10060/sysconfigservice/sysconfig/downzip/{projectid}/{aliaskey}
 
 ```
 
-sysconfig_service/store/octopus 是项目别名，与AlphabetWeb项目 sample_octopus_frontend_service 对应。
+alphabet_sysconfig_service/store/octopus 是项目别名，与AlphabetWeb项目 sample_octopus_frontend_service 对应。
 
-sysconfig_service/store/octopus/dev_remote 是关键字，可以定义多个，例如:test_remote，release_remote 。
+alphabet_sysconfig_service/store/octopus/dev_remote 是关键字，可以定义多个，例如:test_remote，release_remote 。
 
-sysconfig_service/store/octopus/dev_remote/sample_octopus_frontend 对应了 sample_octopus_frontend_service/src/sample_octopus_frontend ，名称必须一致 。
+alphabet_sysconfig_service/store/octopus/dev_remote/sample_octopus_frontend 对应了 sample_octopus_frontend_service/src/sample_octopus_frontend ，名称必须一致 。
 
 ### 1.4. 服务访问说明
 
@@ -99,7 +99,7 @@ http://localhost:10060/sysconfigservice/sysconfig/downzip/{projectid}/{aliaskey}
 
 假设1.3中的sample_octopus_frontend_service的配置项来看，他们的对应关系是：
 
-地址中的关键字{{class="table table-bordered vikings-table-Simple-max200"}}  |  实例值  |  sysconfig_service的路径   |  sample_octopus_frontend_service对应信息
+地址中的关键字  |  实例值  |  sysconfig_service的路径   |  sample_octopus_frontend_service对应信息
 ------|------|-------|------
 {projectid} | octopus |  store/octopus | sample_octopus_frontend_service
 {aliaskey} | dev_remote |  store/octopus/dev_remote | src/../sysconfig.dev_remote
